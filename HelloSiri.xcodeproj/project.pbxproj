@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C110F0A20CF1823008E4D20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C110F0920CF1823008E4D20 /* AppDelegate.swift */; };
-		6C110F0C20CF1823008E4D20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C110F0B20CF1823008E4D20 /* ViewController.swift */; };
+		6C110F0C20CF1823008E4D20 /* FitnessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C110F0B20CF1823008E4D20 /* FitnessVC.swift */; };
 		6C110F0F20CF1823008E4D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C110F0D20CF1823008E4D20 /* Main.storyboard */; };
 		6C110F1120CF1824008E4D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C110F1020CF1824008E4D20 /* Assets.xcassets */; };
 		6C110F1420CF1824008E4D20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C110F1220CF1824008E4D20 /* LaunchScreen.storyboard */; };
@@ -17,11 +17,12 @@
 /* Begin PBXFileReference section */
 		6C110F0620CF1823008E4D20 /* HelloSiri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSiri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C110F0920CF1823008E4D20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C110F0B20CF1823008E4D20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C110F0B20CF1823008E4D20 /* FitnessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessVC.swift; sourceTree = "<group>"; };
 		6C110F0E20CF1823008E4D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C110F1020CF1824008E4D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C110F1320CF1824008E4D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C110F1520CF1824008E4D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C110F1B20CF1D63008E4D20 /* HelloSiri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloSiri.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +55,9 @@
 		6C110F0820CF1823008E4D20 /* HelloSiri */ = {
 			isa = PBXGroup;
 			children = (
+				6C110F1B20CF1D63008E4D20 /* HelloSiri.entitlements */,
 				6C110F0920CF1823008E4D20 /* AppDelegate.swift */,
-				6C110F0B20CF1823008E4D20 /* ViewController.swift */,
+				6C110F0B20CF1823008E4D20 /* FitnessVC.swift */,
 				6C110F0D20CF1823008E4D20 /* Main.storyboard */,
 				6C110F1020CF1824008E4D20 /* Assets.xcassets */,
 				6C110F1220CF1824008E4D20 /* LaunchScreen.storyboard */,
@@ -96,6 +98,11 @@
 				TargetAttributes = {
 					6C110F0520CF1823008E4D20 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C110F0C20CF1823008E4D20 /* ViewController.swift in Sources */,
+				6C110F0C20CF1823008E4D20 /* FitnessVC.swift in Sources */,
 				6C110F0A20CF1823008E4D20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +287,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HelloSiri/HelloSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 633HHXK84N;
 				INFOPLIST_FILE = HelloSiri/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,7 +306,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HelloSiri/HelloSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 633HHXK84N;
 				INFOPLIST_FILE = HelloSiri/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
