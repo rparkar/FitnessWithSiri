@@ -12,7 +12,33 @@
 		6C110F0F20CF1823008E4D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C110F0D20CF1823008E4D20 /* Main.storyboard */; };
 		6C110F1120CF1824008E4D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C110F1020CF1824008E4D20 /* Assets.xcassets */; };
 		6C110F1420CF1824008E4D20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C110F1220CF1824008E4D20 /* LaunchScreen.storyboard */; };
+		6C110F2320CF2274008E4D20 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C110F2220CF2274008E4D20 /* IntentHandler.swift */; };
+		6C110F2720CF2274008E4D20 /* SiriHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C110F2020CF2274008E4D20 /* SiriHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C110F2520CF2274008E4D20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C110EFE20CF1823008E4D20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C110F1F20CF2274008E4D20;
+			remoteInfo = SiriHandler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C110F2B20CF2274008E4D20 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6C110F2720CF2274008E4D20 /* SiriHandler.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6C110F0620CF1823008E4D20 /* HelloSiri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSiri.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,10 +49,20 @@
 		6C110F1320CF1824008E4D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C110F1520CF1824008E4D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C110F1B20CF1D63008E4D20 /* HelloSiri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloSiri.entitlements; sourceTree = "<group>"; };
+		6C110F2020CF2274008E4D20 /* SiriHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C110F2220CF2274008E4D20 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		6C110F2420CF2274008E4D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6C110F0320CF1823008E4D20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C110F1D20CF2274008E4D20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				6C110F0820CF1823008E4D20 /* HelloSiri */,
+				6C110F2120CF2274008E4D20 /* SiriHandler */,
 				6C110F0720CF1823008E4D20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				6C110F0620CF1823008E4D20 /* HelloSiri.app */,
+				6C110F2020CF2274008E4D20 /* SiriHandler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +104,15 @@
 			path = HelloSiri;
 			sourceTree = "<group>";
 		};
+		6C110F2120CF2274008E4D20 /* SiriHandler */ = {
+			isa = PBXGroup;
+			children = (
+				6C110F2220CF2274008E4D20 /* IntentHandler.swift */,
+				6C110F2420CF2274008E4D20 /* Info.plist */,
+			);
+			path = SiriHandler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,15 +123,34 @@
 				6C110F0220CF1823008E4D20 /* Sources */,
 				6C110F0320CF1823008E4D20 /* Frameworks */,
 				6C110F0420CF1823008E4D20 /* Resources */,
+				6C110F2B20CF2274008E4D20 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6C110F2620CF2274008E4D20 /* PBXTargetDependency */,
 			);
 			name = HelloSiri;
 			productName = HelloSiri;
 			productReference = 6C110F0620CF1823008E4D20 /* HelloSiri.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6C110F1F20CF2274008E4D20 /* SiriHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C110F2820CF2274008E4D20 /* Build configuration list for PBXNativeTarget "SiriHandler" */;
+			buildPhases = (
+				6C110F1C20CF2274008E4D20 /* Sources */,
+				6C110F1D20CF2274008E4D20 /* Frameworks */,
+				6C110F1E20CF2274008E4D20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiriHandler;
+			productName = SiriHandler;
+			productReference = 6C110F2020CF2274008E4D20 /* SiriHandler.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -104,6 +170,9 @@
 							};
 						};
 					};
+					6C110F1F20CF2274008E4D20 = {
+						CreatedOnToolsVersion = 9.4;
+					};
 				};
 			};
 			buildConfigurationList = 6C110F0120CF1823008E4D20 /* Build configuration list for PBXProject "HelloSiri" */;
@@ -120,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				6C110F0520CF1823008E4D20 /* HelloSiri */,
+				6C110F1F20CF2274008E4D20 /* SiriHandler */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +205,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C110F1E20CF2274008E4D20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -147,7 +224,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C110F1C20CF2274008E4D20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C110F2320CF2274008E4D20 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C110F2620CF2274008E4D20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C110F1F20CF2274008E4D20 /* SiriHandler */;
+			targetProxy = 6C110F2520CF2274008E4D20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6C110F0D20CF1823008E4D20 /* Main.storyboard */ = {
@@ -286,6 +379,7 @@
 		6C110F1920CF1824008E4D20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HelloSiri/HelloSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +399,7 @@
 		6C110F1A20CF1824008E4D20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HelloSiri/HelloSiri.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +411,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkar.HelloSiri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6C110F2920CF2274008E4D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 633HHXK84N;
+				INFOPLIST_FILE = SiriHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parkar.HelloSiri.SiriHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C110F2A20CF2274008E4D20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 633HHXK84N;
+				INFOPLIST_FILE = SiriHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.parkar.HelloSiri.SiriHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +471,15 @@
 			buildConfigurations = (
 				6C110F1920CF1824008E4D20 /* Debug */,
 				6C110F1A20CF1824008E4D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C110F2820CF2274008E4D20 /* Build configuration list for PBXNativeTarget "SiriHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C110F2920CF2274008E4D20 /* Debug */,
+				6C110F2A20CF2274008E4D20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
