@@ -15,6 +15,7 @@
 		6C110F2320CF2274008E4D20 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C110F2220CF2274008E4D20 /* IntentHandler.swift */; };
 		6C110F2720CF2274008E4D20 /* SiriHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C110F2020CF2274008E4D20 /* SiriHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6C110F2D20CF2ACF008E4D20 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C110F2C20CF2ACF008E4D20 /* DataService.swift */; };
+		6C110F2F20CF2FD1008E4D20 /* DoubleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C110F2E20CF2FD1008E4D20 /* DoubleExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		6C110F2220CF2274008E4D20 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		6C110F2420CF2274008E4D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C110F2C20CF2ACF008E4D20 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		6C110F2E20CF2FD1008E4D20 /* DoubleExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				6C110F1220CF1824008E4D20 /* LaunchScreen.storyboard */,
 				6C110F1520CF1824008E4D20 /* Info.plist */,
 				6C110F2C20CF2ACF008E4D20 /* DataService.swift */,
+				6C110F2E20CF2FD1008E4D20 /* DoubleExtention.swift */,
 			);
 			path = HelloSiri;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C110F2D20CF2ACF008E4D20 /* DataService.swift in Sources */,
+				6C110F2F20CF2FD1008E4D20 /* DoubleExtention.swift in Sources */,
 				6C110F0C20CF1823008E4D20 /* FitnessVC.swift in Sources */,
 				6C110F0A20CF1823008E4D20 /* AppDelegate.swift in Sources */,
 			);

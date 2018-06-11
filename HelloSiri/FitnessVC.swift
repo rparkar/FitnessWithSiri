@@ -52,7 +52,7 @@ class FitnessVC: UIViewController {
         timerLabel.isHidden = false
         
         typeLabel.text = "Type: \(workoutType.capitalized)"
-        timerLabel.text = "\(goalValue) left "
+        timerLabel.text = "\(goalValue.convertToClockTime()) left "
         
     }
     
