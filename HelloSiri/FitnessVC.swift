@@ -20,6 +20,8 @@ class FitnessVC: UIViewController {
         super.viewDidLoad()
         
         setUpView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSiriRequest), name: NSNotification.Name("workoutStartedNotification"), object: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -38,6 +40,21 @@ class FitnessVC: UIViewController {
         }
     }
     
+    @objc func handleSiriRequest() {
+        
+        guard let intent = DataService.instance.workoutIntent, let goalValue = intent.goalValue, let workoutType = intent.workoutName?.spokenPhrase else {
+            timerLabel.isHidden = true
+            typeLabel.isHidden = true
+            return
+        }
+        
+        typeLabel.isHidden = false
+        timerLabel.isHidden = false
+        
+        typeLabel.text = "Type: \(workoutType.capitalized)"
+        timerLabel.text = "\(goalValue) left "
+        
+    }
     
     
     
