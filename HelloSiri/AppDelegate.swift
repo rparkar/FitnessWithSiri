@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
+        DataService.instance.workoutIntent = intent
+        
         print("AppDelegate: Start workiut inent - true")
         print(intent)
         return true
